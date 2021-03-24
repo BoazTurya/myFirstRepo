@@ -1,17 +1,17 @@
 
 header{
-    background-image:url(./images/unnamed.gif);
+    background-image:url(../images/unnamed.gif);
     height:4cm;
     background-size: contain;
 }
 body {
-    background-image: url(./images/db.jpg);
+    background-image: url(../images/db.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 footer{
     background-color:black; 
-    background-image: url(./images/argiro2.jfif);
+    background-image: url(../images/argiro2.jfif);
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: right;
