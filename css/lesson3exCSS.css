@@ -1,7 +1,14 @@
 
-div#redBox{
+div#redbox{
     background-color: red;
     height: 10em;
-    width: 20em;
-    border: solid;
+    width: 10em;
+}
+div#bluebox{
+    background-color: blue;
+    height: 10em;
+    width: 10em;
+    position: absolute;
+    left: 5em;
+    top: 5em;
 }
