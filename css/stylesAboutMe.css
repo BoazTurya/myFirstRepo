@@ -27,13 +27,15 @@ p::first-letter{
     font-size: 150%;
 }
 dt,dd{
+    font-family:cursive;
     color: olive;
-    font-size: 85%
+    font-size: 80%
 }
 dd{
     font-style: italic;
-    font-family:cursive;    
+    color:darkolivegreen;    
 }
+
 img.moods{
     width: 10em;
     height: 10em;
