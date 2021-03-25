@@ -13,9 +13,24 @@ h3{
 body{
     background-color: rgba(177, 130, 97, 0.384);
 }
-a#country ,#course,#home{
+a{
     text-decoration: none;
     color: darkgreen;
+}   
+
+a:hover{
+    color: firebrick;
+    text-decoration: underline;
+
+}
+p::first-letter{
+    font-size: 150%;
+}
+dt,dd{
+    color: olive;
+}
+dd{
+    font-style: italic;
 }
 img.moods{
     width: 10em;
