@@ -44,3 +44,12 @@ footer{
     background-color: black;
     height: 3em;
 }
+div#movies ol dl{
+    display: none;
+}
+div#movies li:hover >dl{
+    display: initial;
+}
+p#john{
+    transform: rotateX(180deg);
+}
