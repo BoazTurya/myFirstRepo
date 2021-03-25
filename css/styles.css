@@ -24,9 +24,12 @@ h3,h4{
     font-style: italic;
     font-weight: bold;
 }
-ul ul{
+ul ol{
     display: none;
 }
-li:hover > ul{
+ul ol a{
+    text-decoration: none;
+}
+li:hover >ol{
     display:initial;
 }
