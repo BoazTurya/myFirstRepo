@@ -13,8 +13,9 @@ h3{
 body{
     background-color: rgba(177, 130, 97, 0.384);
 }
-a#country ,#course{
+a#country ,#course,#home{
     text-decoration: none;
+    color: darkgreen;
 }
 img.moods{
     width: 10em;
@@ -22,4 +23,5 @@ img.moods{
 }
 footer{
     background-color: black;
+    height: 3em;
 }
