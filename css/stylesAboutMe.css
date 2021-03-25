@@ -28,9 +28,11 @@ p::first-letter{
 }
 dt,dd{
     color: olive;
+    font-size: 85%
 }
 dd{
     font-style: italic;
+    font-family:cursive;    
 }
 img.moods{
     width: 10em;
