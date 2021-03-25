@@ -1,3 +1,12 @@
 body{
     background-image: url(../images/tmnt/background.png);
 }
+#banner{
+    font-size: 5em;;
+    color: red;
+}
+p.reviews{
+    font-style: oblique;
+    font-weight: bold;
+    
+}
