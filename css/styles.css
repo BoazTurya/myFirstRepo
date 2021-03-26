@@ -26,6 +26,7 @@ h3,h4{
 }
 ul ol{
     display: none;
+    list-style-type:lower-roman;
 }
 ul ol a{
     text-decoration: none;
