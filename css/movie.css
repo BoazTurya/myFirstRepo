@@ -9,8 +9,8 @@ body{
     background-color:lightgreen;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 95% 5%;
-    width: 65%;
+    grid-template-rows: 97% 3%;
+    width: 55%;
 }
 #top{
     display:grid;
@@ -21,6 +21,7 @@ body{
 }
 h1{
     text-align: center;
+    text-shadow: 10px 10px 10px rgb(117, 30, 45);
 }
 #banner{
     border-top-left-radius: 25px;
@@ -29,20 +30,28 @@ h1{
     background-image: url(../images/tmnt/rbg.png);
     background-repeat: repeat-x;
     height: 83px;
+    overflow: hidden;
     /* background-position-y: center; */
 }
 #banner >img{
     border-top-left-radius:23px;
+    /* vertical-align: middle; */
 }
 #reviewbox{
     background-image: url(../images/tmnt/background.png);
     display: grid;
     grid-template-columns: 50% 50%;
 }
-
-#overview >img{
-    border-radius: 0 25px 0 0;
+#reviewbox >div{
+    padding: 5px;
 }
+#overview >img{
+    border-top-right-radius: 25px;
+}
+dl >dt{
+    font-weight: bold;
+}
+
 p.reviews{
     font-style: oblique;
     font-weight: bold;
@@ -52,6 +61,10 @@ p.reviews{
     background-color: rgb(245, 222, 202);
     padding: 5px;
 }
+p.name >img{
+    vertical-align: middle;
+
+}
 #validators{
     float: right;
 }
@@ -60,13 +73,12 @@ p.reviews{
     background-repeat: repeat-x;
     text-align: center;
 }
-/* 
+/*  
 div#divLeftSide{
     float:left
 
-}
+} */
 
 div#divRightSide{
-    
-    float: right;
-} */
+    overflow: hidden;
+} 
