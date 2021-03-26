@@ -7,19 +7,39 @@ body{
     border-style: solid;
     border-color: gray;
     background-color:lightgreen;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 95% 5%;
+    width: 65%;
+}
+#top{
+    display:grid;
+    grid-template-columns: 70.5% 29.5%;
+}
+#main >div#bottom{
+    text-align: center;
 }
 h1{
     text-align: center;
 }
 #banner{
-    font-size: 5em;;
+    border-top-left-radius: 25px;
+    font-size: 5em;
     color: red;
     background-image: url(../images/tmnt/rbg.png);
     background-repeat: repeat-x;
+    height: 83px;
+    /* background-position-y: center; */
+}
+#banner >img{
+    border-top-left-radius:23px;
 }
 #reviewbox{
     background-image: url(../images/tmnt/background.png);
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
+
 #overview >img{
     border-radius: 0 25px 0 0;
 }
@@ -30,6 +50,7 @@ p.reviews{
     border-style: solid;
     border-color: gray;
     background-color: rgb(245, 222, 202);
+    padding: 5px;
 }
 #validators{
     float: right;
@@ -39,3 +60,13 @@ p.reviews{
     background-repeat: repeat-x;
     text-align: center;
 }
+/* 
+div#divLeftSide{
+    float:left
+
+}
+
+div#divRightSide{
+    
+    float: right;
+} */
