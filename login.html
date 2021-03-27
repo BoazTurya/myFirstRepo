@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/login.css" rel="stylesheet">
     <title>Login Form</title>
 </head>
@@ -12,12 +9,12 @@
         <form action="#" id="loginform" method="GET" >
             <div>
                 <p><label for="emailbox">Email Address</label></p>
-                <input id="emailbox" type="text" name="email" value="Enter Email" size = 90%>
+                <input id="emailbox" type="text" name="email" placeholder="Enter Email" size = 90%>
                 <p id="assurance">We'll never share your email with anyone else</p>
             </div>
             <div>
                 <p><label for="passbox" >Password</label></p>
-                <input id="passbox" type="password" name="password" value="Password" size = 90%>
+                <input id="passbox" type="password" name="password" placeholder ="Password" size = 90%>
             </div>
             <div>
                 <p><label><input type="checkbox">Check me out</label></p>
@@ -26,6 +23,15 @@
                 <p><input id="submitbutton" type="submit"></p>
             </div>
         </form>
+    </div>
+    <div id="validators">
+        <a href="https://boazturya.github.io/myFirstRepo/index.html">MY HOME</a><br>
+        <a href="https://validator.w3.org/nu/?doc=https://boazturya.github.io/myFirstRepo/login.html">
+            <img src="./images/tmnt/w3c-html.png" alt="Valid HTML5" />
+        </a> <br />
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://BoazTurya.github.io/myFirstRepo/css/login.css">
+            <img src="./images/tmnt/w3c-css.png" alt="Valid CSS" />
+        </a>
     </div>
     
 </body>
