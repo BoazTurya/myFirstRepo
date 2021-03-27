@@ -1,7 +1,16 @@
 #submitbutton{
-    background-color: cyan;
+    color: white;
+    background-color: #2767f3;
+    border-radius: 5px;
 }
 #assurance{
     opacity: 0.5;
     margin-top: 0%;
+}
+#formcontainer{
+    width: min-content;
+    margin: auto;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
