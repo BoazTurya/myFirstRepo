@@ -1,3 +1,25 @@
 #validators{
     float: right;
 }
+body{
+    margin: 0;
+}
+#banner{
+    background-color: rgb(0,150,255);
+    color: white;
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+#banner a{
+    text-decoration: none;
+    color: white;
+    border-left: ridge;
+    border-left-color: thistle;   
+}
+#banner #bannercorner{
+    float: right;
+}
+button#signout{
+    padding: 10px;
+}
