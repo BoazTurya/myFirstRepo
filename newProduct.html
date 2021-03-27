@@ -23,13 +23,57 @@
             <button id="signout">Sign Out</button>
         </div>
     </div>
-    
+    <h1>New Product Form </h1>
+    <div id="outer">
+        <form action="#">
+            <div id="forminputdiv">
+                <div>
+                    <label>Product Number<br>
+                        <input class = inputbox type="text">
+                    </label>
+                </div>
+                <div>
+                    <label>Quantity in Stock<br>
+                        <input class = inputbox type="number">
+                    </label>
+                </div>
+                <div>
+                    <label>Name<br>
+                        <input class = inputbox type="text">
+                    </label>
+                </div>
+                <div>
+                    <label>Supplier<br>
+                        <select class = inputbox name="suppliers" aria-placeholder="Select a supplier">
+                            <option value="none" disabled selected>Select a supplier</option>
+                            <option value="supplier1">Supplier1</option>
+                            <option value="supplier2">Supplier2</option>
+                            <option value="supplier3">Supplier3</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label>Unit Price<br>
+                        <input class = inputbox type ="text" placeholder = "0.0">
+                    </label>
+                </div>
+                
+                <div>
+                    <label>Date Supplied<br>
+                        <input class = inputbox type="date" placeholder = yyyy-mm-dd>
+                    </label>
+                    <br><small>Enter a Valid Date</small>
 
+                </div>
+            </div>
 
-
-
-
-
+            <div id="buttondiv">
+                <button type="reset">Reset</button>
+                <button >Cancel</button>
+                <button>Add Product</button>
+            </div>
+        </form>
+    </div>
     <div id="validators">
         <a href="https://boazturya.github.io/myFirstRepo/index.html">MY HOME</a><br>
         <a href="https://validator.w3.org/nu/?doc=https://boazturya.github.io/myFirstRepo/newProduct.html">
