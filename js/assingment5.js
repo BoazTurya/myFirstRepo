@@ -50,7 +50,7 @@ console.log("sum "+sum(arr)+ " product "+ product(arr));
 // For example, reverse("jag testar") should return the string "ratset gaj".
 function reverse(input){
     let outputString="";
-    for(let i=0; i<(input.length); i++){
+    for(let i=0; i<input.length; i++){
         outputString += input.charAt(input.length-1-i);
     }
     return outputString;
@@ -60,27 +60,63 @@ let string = "jag testar";
 console.log(string +" reversed is "+reverse(string));
 // 6.
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
+function findLongestWord(wrdArr){
+    let longest, longestLength = 0;
+    wrdArr.forEach(ele=>{if(ele.length>longestLength){ 
+                                longest = ele;}});
+    return longest;
+}
 console.log("Number 6:");
+let myWords = ["house","elevator","encylopedia","sheep","mississipi","bee","up","liquidator"]
+console.log(findLongestWord(myWords));
 // 7.	
 // Write a function filterLongWords() that takes an array of words and an integer i 
 // and returns a new array containing only those words that were longer than i characters.
+function filterLongWords(wrd,l){
+    let out = [];
+    wrd.forEach(el=>{if(el.length>l){ out.push(el);  }  }  );
+    return out;
+}
 console.log("Number 7:");
+let words = ["house","elevator","cow","sheep","mississipi","bee","up","liquidator"];
+let i = 5;
+console.log(filterLongWords(words,i));
 // 8.
 // Write a function named, computeSumOfSquares, that takes as input, an array of numbers 
 // and calculates and returns the sum of the squares of each number in the input array. 
 // E.g. computeSumOfSquares([1,2,3]) should be computed as 12 + 22 +32 = 14. 
 // Note: Write your Javascript code without using Imperative programming. 
 // i.e. Do NOT use any explicit looping construct; instead use functional programming style/approach.
-console.log("Number 8:");
+function computeSumOfSquares(numArr){
+    let out=0;
+    numArr.forEach(e=>out+=e*e);
+    return out;
+}
+let numbers = [1,2,3,4];
+console.log(computeSumOfSquares(numbers));
 // 9.	
 // Write a function named, printOddNumbersOnly, that takes as input, an array of integral numbers 
 // and it finds and prints only the numbers which are odd.
+function printOddNumbersOnly(numArr){
+    let out = [];
+    numArr.forEach(ele=>{if(ele%2!=0){out.push(ele);}});
+    return out;
+}
 console.log("Number 9:");
+let sampleArr = [12,41,33,56,7,18];
+console.log(printOddNumbersOnly(sampleArr));
 // 10.	
 // Write a function named, computeSumOfSquaresOfEvensOnly, that takes as input, 
 // an array of integral numbers and calculates and returns the sum of the squares of only the even numbers in the input array. 
 // E.g. computeSumOfSquaresOfEvensOnly ([1,2,3,4,5]) should be computed as 22 +42 = 20.
+function computeSumOfSquaresOfEvensOnly(inputArr){
+    let sqSum = 0;
+    inputArr.forEach(element=>{if(element%2==0){ sqSum += element*element; } });
+    return sqSum;
+}
 console.log("Number 10:");
+let numberArray = [1,2,3,4,5];
+console.log(computeSumOfSquaresOfEvensOnly(numberArray));
 // 11.	
 // Using the Array.reduce(…) function, re-implement your functions, sum(…) and multiply(…)
 //  (defined in Problem 4 above) without using Imperative programming. 
