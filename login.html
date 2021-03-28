@@ -9,19 +9,21 @@
         <form action="#" id="loginform" method="GET" >
             <div>
                 <p><label for="emailbox">Email Address</label></p>
-                <input required class="inputbox" id="emailbox" type="text" name="email" placeholder="Enter Email"
-                pattern=".+@.+\.[a-zA-Z]{2,3}">
+                <input id = "emailbox" class="inputbox" type="text" name="email" placeholder="Enter Email"
+                            pattern=".+@.+\.[a-zA-Z]{2,3}"
+                            title = "enter valid email address" required >
                 <small>We'll never share your email with anyone else</small>
             </div>
             <div>
                 <p><label for="passbox" >Password</label></p>
-                <input class="inputbox" id="passbox" type="password" name="password" placeholder ="Password" 
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
-                    title="atleast one number, one upper, one lower and min 10characters">
+                <input id = "passbox" class="inputbox" type="password" name="password" placeholder ="Password" 
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
+                            title="atleast one number, one upper, one lower and min 10characters">
             </div>
             <div>
                 <p><label for="urlbox">URL</label></p>
-                <input id = "urlbox" class = "inputbox" type="text" placeholder="Enter URL" pattern="https?://.+"
+                <input id = "urlbox" class = "inputbox" type="text" placeholder="Enter URL" 
+                            pattern="https?://.+"
                             title="url must be valid http or https">
             </div>
             <div>
