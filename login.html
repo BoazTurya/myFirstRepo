@@ -10,12 +10,12 @@
             <div>
                 <p><label for="emailbox">Email Address</label></p>
                 <input required class="inputbox" id="emailbox" type="text" name="email" placeholder="Enter Email"
-                pattern="(?=.{10,})(?=.*\d)(?=.*[a-z]).*[A-Z]">
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}">
                 <small>We'll never share your email with anyone else</small>
             </div>
             <div>
                 <p><label for="passbox" >Password</label></p>
-                <input required class="inputbox" id="passbox" type="password" name="password" placeholder ="Password" 
+                <input class="inputbox" id="passbox" type="password" name="password" placeholder ="Password" 
                              title="atleast one number, one upper, one lower and min 10characters">
             </div>
             <div>
