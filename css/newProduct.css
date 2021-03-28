@@ -19,16 +19,20 @@
 #banner #bannercorner{
     float: right;
 }
-button#signout{
-    padding: 5px;
+button{
+    padding: 12px;
+    font-family: Verdana;
+    border-radius: 10px;
 }
 h1{
     text-align: center;
+    font-family: verdana;
 }
 #buttondiv{
     float: right;
     /* border: solid; */
 }
+
 #resetbutton{
     border-color:seagreen;
     color: seagreen;
@@ -41,25 +45,29 @@ h1{
     border-color:blue ;
     color: blue;
 }
-/* form{
-    border: solid;
-} */
+form{
+    /* border: solid; */
+    width: 700px;
+    margin: auto;
+    margin-bottom:  100px;
+}
 
 #forminputdiv{
     display: grid;
     grid-template-columns: 50% 50%;
-    column-gap: 25px;
+    column-gap: 20px;
+    /* border: solid; */
 }
 #forminputdiv >div{
-    padding: 10px;
-
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .inputbox{
     width: 325px; ;
 }
-div#outer{
+/* div#outer{
     width: 700px;
     margin: auto;
     padding-bottom: 100px;
-    /* border: solid; */
-}
+    border: solid;
+} */
