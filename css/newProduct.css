@@ -2,22 +2,27 @@
     float: right;
     clear: right;
 }
-#banner{
+body{
+    margin: 0;
+}
+#navbar{
     background-color: rgb(0,150,255);
     color: white;
-    width: 700px;
-    margin: auto;
-    height: 35px;
-    padding: 10px;
+    height: 50px;
+    padding: 2px;
+    /* align-items: center; */
 }
-#banner a{
+#navbar a{
     text-decoration: none;
     color: white;
     border-left: ridge;
     border-left-color: thistle;   
 }
-#banner #bannercorner{
+#navbar #bannercorner{
     float: right;
+}
+#bannerleft a, b{
+    padding: 25px;
 }
 button{
     padding: 12px;
@@ -26,8 +31,7 @@ button{
     border-radius: 10px;
 }
 h1{
-    text-align: center;
-    font-family: verdana;
+    font-family: sans-serif;
 }
 #buttonsright{
     float: right;
@@ -67,9 +71,8 @@ form{
 .inputbox{
     width: 325px; ;
 }
-/* div#outer{
-    width: 700px;
+div#outer{
+    width: 750px;
     margin: auto;
-    padding-bottom: 100px;
-    border: solid;
-} */
+    padding-bottom: 25px;
+}
