@@ -163,12 +163,15 @@ console.log("sum "+sum2(arr2)+ " product "+ product2(arr2));
 */
 function findSecondBiggest(inputArr){
     if(inputArr.length<2){return null;}
-    if(inputArr[0]>inputArr[1]){  let biggest = inputArr[0]; let second = inputArr[1];
+    if(inputArr[0]>inputArr[1]){  
+        let biggest = inputArr[0]; 
+        let second = inputArr[1];
     }else{ biggest = inputArr[1];  second = inputArr[0];  }
 
     for(let i=2;i<inputArr.length;i++){
         if(inputArr[i]>biggest){
-            second = biggest; biggest = inputArr[i];
+            second = biggest; 
+            biggest = inputArr[i];
         }else if(inputArr[i]>second){
             second = inputArr[i];
         }
