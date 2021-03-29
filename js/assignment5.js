@@ -205,3 +205,15 @@ function printFibo(n,a,b){
 console.log("Number 13:");
 let length = 6, starterA = 0, starterB = 1;
 printFibo(length,starterA,starterB);
+
+
+/*
+    15.	Using JavaScript and HTML and CSS, implement a webpage that displays a working, ticking counter Clock, 
+    that counts/displays the current Date and time of the browser host, in the format: 2019-11-4 12:16:01  
+*/
+
+const date = new Date();
+const today = document.getElementById("dateArea");
+//today.value = "boaz" ;
+console.log("Number 15:");
+today.value =date;
