@@ -99,11 +99,11 @@ console.log(computeSumOfSquares(numbers));
 // Write a function named, printOddNumbersOnly, that takes as input, an array of integral numbers 
 // and it finds and prints only the numbers which are odd.
 function printOddNumbersOnly(numArr){
-    return numArr.filter(t=>t%2!==0);
+    console.log( numArr.filter(t=>t%2!==0));
 }
 console.log("Number 9:");
 let sampleArr = [12,41,33,56,7,18];
-console.log(printOddNumbersOnly(sampleArr));
+printOddNumbersOnly(sampleArr);
 
 // 10.	
 // Write a function named, computeSumOfSquaresOfEvensOnly, that takes as input, 
@@ -170,8 +170,9 @@ function printFibo(n,a,b){
         out.push(out[counter]+out[counter+1]);
         counter++;
     }
-    return out;
+    //return out;
+    console.log(out);
 }
 console.log("Number 13:");
 let length = 6, starterA = 0, starterB = 1;
-console.log(printFibo(length,starterA,starterB));
+printFibo(length,starterA,starterB);
