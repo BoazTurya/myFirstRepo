@@ -101,6 +101,7 @@ function printOddNumbersOnly(numArr){
     let out = [];
     numArr.forEach(ele=>{if(ele%2!=0){out.push(ele);}});
     return out;
+    // return numArr.filter(t=>t%2!==0);
 }
 console.log("Number 9:");
 let sampleArr = [12,41,33,56,7,18];
@@ -110,9 +111,12 @@ console.log(printOddNumbersOnly(sampleArr));
 // an array of integral numbers and calculates and returns the sum of the squares of only the even numbers in the input array. 
 // E.g. computeSumOfSquaresOfEvensOnly ([1,2,3,4,5]) should be computed as 22 +42 = 20.
 function computeSumOfSquaresOfEvensOnly(inputArr){
-    let sqSum = 0;
+    /*let sqSum = 0;
     inputArr.forEach(element=>{if(element%2==0){ sqSum += element*element; } });
-    return sqSum;
+    return sqSum;*/
+    return inputArr.filter(t=>t%2===0)
+                    .map(t=>t*t)
+                    .reduce((a,b)=>a+b);
 }
 console.log("Number 10:");
 let numberArray = [1,2,3,4,5];
@@ -121,13 +125,37 @@ console.log(computeSumOfSquaresOfEvensOnly(numberArray));
 // Using the Array.reduce(…) function, re-implement your functions, sum(…) and multiply(…)
 //  (defined in Problem 4 above) without using Imperative programming. 
 //  i.e. Do NOT use any explicit looping construct; instead use functional programming style/approach. 
+function sum2(inputArr){
+    return inputArr.reduce((a,b)=>a+b);
+}
+function product2(inputArr){
+    return inputArr.reduce((a,b)=>a*b);
+}
 console.log("Number 11:");
+let arr2 = [1,2,3,4];
+console.log("sum "+sum2(arr2)+ " product "+ product2(arr2));
 // 12.	
 // Implement Javascript code for a function named, findSecondBiggest, 
 // which takes as input, an array of numbers and finds and returns the second biggest of the numbers. 
 // For example, findSecondBiggest([1,2,3,4,5]) should return 4. And findSecondBiggest([19,9,11,0,12]) should return 12.
 //  (Note: Do not use sorting!)
+function findSecondBiggest(inputArr){
+    if(inputArr.length<2){return null;}
+    if(inputArr[0]>inputArr[1]){  let biggest = inputArr[0]; let second = inputArr[1];
+    }else{ biggest = inputArr[1];  second = inputArr[0];  }
+
+    for(let i=2;i<inputArr.length;i++){
+        if(inputArr[i]>biggest){
+            second = biggest; biggest = inputArr[i];
+        }else if(inputArr[i]>second){
+            second = inputArr[i];
+        }
+    }
+    return second;
+}
 console.log("Number 12:");
+let testArray = [1,2,3,4,5];
+console.log(findSecondBiggest(testArray));
 // 13.
 // Write a function named printFibo, that takes as input, a given length, n, 
 // and any two starting numbers a and b, and it prints-out the Fibonacci sequence, 
@@ -137,4 +165,14 @@ console.log("Number 12:");
 //  printFibo(n=3, a=0, b=1), prints-out: "0, 1, 1", as output; 
 //  printFibo(n=6, a=0, b=1), prints-out: "0, 1, 1, 2, 3, 5", as output; 
 //  and printFibo(n=10, a=0, b=1), prints-out: "0, 1, 1, 2, 3, 5, 8, 13, 21, 34", as output).
+function printFibo(n,a,b){
+    let counter =0; let out = [a,b];
+    while(counter < n-2){
+        out.push(out[counter]+out[counter+1]);
+        counter++;
+    }
+    return out;
+}
 console.log("Number 13:");
+let length = 6, starterA = 0, starterB = 1;
+console.log(printFibo(length,starterA,starterB));
