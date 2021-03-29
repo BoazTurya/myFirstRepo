@@ -65,6 +65,7 @@ function findLongestWord(wrdArr){
     wrdArr.forEach(ele=>{if(ele.length>longestLength){ 
                                 longest = ele;}});
     return longest;
+
 }
 console.log("Number 6:");
 let myWords = ["house","elevator","encylopedia","sheep","mississipi","bee","up","liquidator"]
@@ -87,33 +88,28 @@ console.log(filterLongWords(words,i));
 // E.g. computeSumOfSquares([1,2,3]) should be computed as 12 + 22 +32 = 14. 
 // Note: Write your Javascript code without using Imperative programming. 
 // i.e. Do NOT use any explicit looping construct; instead use functional programming style/approach.
-function computeSumOfSquares(numArr){
-    let out=0;
-    numArr.forEach(e=>out+=e*e);
-    return out;
+function computeSumOfSquares(inputArr){
+    return inputArr.map(e=>e*e)
+                    .reduce((a,b)=>a+b);
 }
+console.log("Number 8:");
 let numbers = [1,2,3,4];
 console.log(computeSumOfSquares(numbers));
 // 9.	
 // Write a function named, printOddNumbersOnly, that takes as input, an array of integral numbers 
 // and it finds and prints only the numbers which are odd.
 function printOddNumbersOnly(numArr){
-    let out = [];
-    numArr.forEach(ele=>{if(ele%2!=0){out.push(ele);}});
-    return out;
-    // return numArr.filter(t=>t%2!==0);
+    return numArr.filter(t=>t%2!==0);
 }
 console.log("Number 9:");
 let sampleArr = [12,41,33,56,7,18];
 console.log(printOddNumbersOnly(sampleArr));
+
 // 10.	
 // Write a function named, computeSumOfSquaresOfEvensOnly, that takes as input, 
 // an array of integral numbers and calculates and returns the sum of the squares of only the even numbers in the input array. 
 // E.g. computeSumOfSquaresOfEvensOnly ([1,2,3,4,5]) should be computed as 22 +42 = 20.
 function computeSumOfSquaresOfEvensOnly(inputArr){
-    /*let sqSum = 0;
-    inputArr.forEach(element=>{if(element%2==0){ sqSum += element*element; } });
-    return sqSum;*/
     return inputArr.filter(t=>t%2===0)
                     .map(t=>t*t)
                     .reduce((a,b)=>a+b);
@@ -121,6 +117,7 @@ function computeSumOfSquaresOfEvensOnly(inputArr){
 console.log("Number 10:");
 let numberArray = [1,2,3,4,5];
 console.log(computeSumOfSquaresOfEvensOnly(numberArray));
+
 // 11.	
 // Using the Array.reduce(…) function, re-implement your functions, sum(…) and multiply(…)
 //  (defined in Problem 4 above) without using Imperative programming. 
@@ -134,6 +131,7 @@ function product2(inputArr){
 console.log("Number 11:");
 let arr2 = [1,2,3,4];
 console.log("sum "+sum2(arr2)+ " product "+ product2(arr2));
+
 // 12.	
 // Implement Javascript code for a function named, findSecondBiggest, 
 // which takes as input, an array of numbers and finds and returns the second biggest of the numbers. 
@@ -156,6 +154,7 @@ function findSecondBiggest(inputArr){
 console.log("Number 12:");
 let testArray = [1,2,3,4,5];
 console.log(findSecondBiggest(testArray));
+
 // 13.
 // Write a function named printFibo, that takes as input, a given length, n, 
 // and any two starting numbers a and b, and it prints-out the Fibonacci sequence, 
