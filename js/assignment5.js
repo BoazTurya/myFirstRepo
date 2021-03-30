@@ -213,15 +213,15 @@ printFibo(length,starterA,starterB);
 */
 
 
-const today = document.getElementById("dateArea");
-//today.value = "boaz" ;
 console.log("Number 15:");
 
-
-function tick(){
+function displayTime(){
     const dateNow = new Date();
-    const time = dateNow.getFullYear() +"-"+ (dateNow.getMonth()+1)+ "-"+dateNow.getDate()+" "+ 
-                dateNow.getHours() +":"+ dateNow.getMinutes() +":"+ dateNow.getSeconds();
-    document.getElementById("clockArea").innerText = time;
+    const timeFormat =  dateNow.getFullYear() +"-"+ (dateNow.getMonth()+1)+ "-"+dateNow.getDate()+" "+ 
+                            dateNow.getHours() +":"+ dateNow.getMinutes() +":"+ dateNow.getSeconds();
+    document.getElementById("clockArea").innerText = timeFormat;
 }
-setInterval(tick(),1000);
+function startclock(){
+    setInterval(displayTime,1000);
+}
+startclock();

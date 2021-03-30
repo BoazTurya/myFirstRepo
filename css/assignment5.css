@@ -2,3 +2,9 @@
     float: right;
     clear: right;
 }
+
+#clockArea{
+    font-size: 3em;
+    text-align: center;
+    color: brown;
+}
