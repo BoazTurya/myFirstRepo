@@ -219,7 +219,4 @@ function displayTime(){
                             dateNow.getHours() +":"+ dateNow.getMinutes() +":"+ dateNow.getSeconds();
     document.getElementById("clockArea").innerText = timeFormat;
 }
-function startclock(){
-    setInterval(displayTime,1000);
-}
-startclock();
+setInterval(displayTime,1000);

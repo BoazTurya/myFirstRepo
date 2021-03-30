@@ -4,5 +4,5 @@ submitButton.addEventListener("click",function(){
    const passbox = document.getElementById("passbox").value;
    const urlbox = document.getElementById("urlbox").value;
 
-   alert("Email: "+emailbox+"\nPassword: "+passbox+"\nURL: "+urlbox);   
+   console.log("Email: "+emailbox+"\nPassword: "+passbox+"\nURL: "+urlbox);   
 });
