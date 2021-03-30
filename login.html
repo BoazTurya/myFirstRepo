@@ -19,19 +19,19 @@
                 <p><label for="passbox" >Password</label></p>
                 <input id = "passbox" class="inputbox" type="password" name="psswrd" placeholder ="Password" 
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
-                            title="atleast one number, one upper, one lower and min 10characters">
+                            title="atleast one number, one upper, one lower and min 10characters" required>
             </div>
             <div>
                 <p><label for="urlbox">URL</label></p>
                 <input id = "urlbox" class = "inputbox" type="text" placeholder="Enter URL"
                             pattern="https?://.+"
-                            title="url must be valid http or https">
+                            title="url must be valid http or https" required>
             </div>
             <div>
                 <p><label><input id="checkbox" type="checkbox">Check me out</label></p>
             </div>
             <div>
-                <button id ="submitButton" type="button">Submit</button>
+                <button id ="submitButton" type="submit">Submit</button>
             </div>
         </form>
     </div>
