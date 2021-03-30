@@ -212,8 +212,16 @@ printFibo(length,starterA,starterB);
     that counts/displays the current Date and time of the browser host, in the format: 2019-11-4 12:16:01  
 */
 
-const date = new Date();
+
 const today = document.getElementById("dateArea");
 //today.value = "boaz" ;
 console.log("Number 15:");
-today.value =date;
+
+
+function tick(){
+    const dateNow = new Date();
+    const time = dateNow.getFullYear() +"-"+ (dateNow.getMonth()+1)+ "-"+dateNow.getDate()+" "+ 
+                dateNow.getHours() +":"+ dateNow.getMinutes() +":"+ dateNow.getSeconds();
+    document.getElementById("clockArea").innerText = time;
+}
+setInterval(tick(),1000);
