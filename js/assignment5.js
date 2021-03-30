@@ -26,12 +26,21 @@ console.log(maxOfThree(a,b,c));
     Write a function isVowel() that takes a character (i.e. a string of length 1) 
     and returns true if it is a vowel, false otherwise.
 */
-    function isVowel(character){
-    var vowels = ['a','e','i','o','u'];
-    return vowels.includes(character);
+function isVowel(character){
+    // var vowels = ['a','e','i','o','u'];
+    // return vowels.includes(character.toLowerCase());
+    switch(character.toLowerCase()){
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            return true;
+    }
+    return false;
 }
 console.log("Number 3:");
-let char="a";
+let char="A";
 console.log(isVowel(char));
 /*
     4.	
@@ -39,14 +48,18 @@ console.log(isVowel(char));
     For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24. 
     Note/Hint: Do these using Imperative programming approach (i.e. for…loop or while…loop)
 */
-function sum(input){
+function sum(inputArr){
     let sum = 0;
-    input.forEach(element => { sum+=element; });
+    for(let i=0;i<inputArr.length;i++){
+        sum+=inputArr[i]; 
+    }
     return sum;
 }
-function product(input){
-    let product=1;
-    input.forEach(el=>{ product*=el; });
+function product(inputArr){
+    let product = 1;
+    for(let i=0;i<inputArr.length;i++){
+        product*=inputArr[i]; 
+    }
     return product;
 }
 console.log("Number 4:");
@@ -57,12 +70,17 @@ console.log("sum "+sum(arr)+ " product "+ product(arr));
     Define a function reverse() that computes the reversal of a string. 
     For example, reverse("jag testar") should return the string "ratset gaj".
 */
-    function reverse(input){
-    let outputString="";
+function reverse(input){
+     let outputString="";
+
+    // for(let i=0; i<input.length; i++){
+    //     outputString += input.charAt(input.length-1-i);
+    // }
+
     for(let i=0; i<input.length; i++){
-        outputString += input.charAt(input.length-1-i);
+        outputString = `${outputString}${input.charAt(input.length-1-i)}`;
     }
-    return outputString;
+    return outputString;   
 }
 console.log("Number 5:");
 let string = "jag testar";
@@ -71,7 +89,7 @@ console.log(string +" reversed is "+reverse(string));
     6.
     Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
 */
-    function findLongestWord(wrdArr){
+function findLongestWord(wrdArr){
     let longest, longestLength = 0;
     wrdArr.forEach(ele=>{if(ele.length>longestLength){ 
                                 longest = ele;}});
@@ -145,10 +163,10 @@ console.log(computeSumOfSquaresOfEvensOnly(numberArray));
     i.e. Do NOT use any explicit looping construct; instead use functional programming style/approach. 
 */
 function sum2(inputArr){
-    return inputArr.reduce((a,b)=>a+b);
+    return inputArr.reduce((a,b)=>a+b,100);
 }
 function product2(inputArr){
-    return inputArr.reduce((a,b)=>a*b);
+    return inputArr.reduce((a,b)=>a*b,10);
 }
 console.log("Number 11:");
 let arr2 = [1,2,3,4];
@@ -162,7 +180,9 @@ console.log("sum "+sum2(arr2)+ " product "+ product2(arr2));
     (Note: Do not use sorting!)
 */
 function findSecondBiggest(inputArr){
-    if(inputArr.length<2){return null;}
+    if(inputArr.length<2){
+        throw new Error("invalid array. need atleast 2 elements");
+    }
     if(inputArr[0]>inputArr[1]){  
         let biggest = inputArr[0]; 
         let second = inputArr[1];
@@ -193,17 +213,20 @@ console.log(findSecondBiggest(testArray));
     printFibo(n=6, a=0, b=1), prints-out: "0, 1, 1, 2, 3, 5", as output; 
     and printFibo(n=10, a=0, b=1), prints-out: "0, 1, 1, 2, 3, 5, 8, 13, 21, 34", as output).
 */
+//try this using recursion
+//try this using functional programming
 function printFibo(n,a,b){
     let counter =0; let out = [a,b];
+    if(n===0){out=[];}
+    if(n===1){out=[a];}
     while(counter < n-2){
         out.push(out[counter]+out[counter+1]);
         counter++;
     }
-    //return out;
-    console.log(out);
+    console.log(out.join(", "));
 }
 console.log("Number 13:");
-let length = 6, starterA = 0, starterB = 1;
+let length = 10, starterA = 0, starterB = 1;
 printFibo(length,starterA,starterB);
 
 
