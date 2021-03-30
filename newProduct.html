@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Product Form</title>
     <link rel="stylesheet" href="./css/newProduct.css">
+    <script src="./js/newProduct.js"></script>
 </head>
 <body>
     <div id="navbar">
@@ -31,22 +32,22 @@
             <div id="forminputdiv">
                 <div>
                     <label>Product Number<br>
-                        <input class = inputbox type="text">
+                        <input id = "numberbox" class = inputbox type="text">
                     </label>
                 </div>
                 <div>
                     <label>Quantity in Stock<br>
-                        <input class = inputbox type="number">
+                        <input id="quantitybox" class = inputbox type="number">
                     </label>
                 </div>
                 <div>
                     <label>Name<br>
-                        <input class = inputbox type="text">
+                        <input id="namebox" class = inputbox type="text">
                     </label>
                 </div>
                 <div>
                     <label>Supplier<br>
-                        <select class = inputbox name="suppliers" >
+                        <select id="supplierbox" class = inputbox name="suppliers" >
                             <option value="none" disabled selected>Select a supplier</option>
                             <option value="supplier1">Supplier1</option>
                             <option value="supplier2">Supplier2</option>
@@ -56,13 +57,13 @@
                 </div>
                 <div>
                     <label>Unit Price<br>
-                        <input class = inputbox type ="text" placeholder = "0.0">
+                        <input id="pricebox" class = inputbox type ="text" placeholder = "0.0">
                     </label>
                 </div>
                 
                 <div>
                     <label>Date Supplied<br>
-                        <input class = inputbox type="date" placeholder = yyyy-mm-dd>
+                        <input id="datebox" class = inputbox type="date" placeholder = yyyy-mm-dd>
                     </label>
                     <br><small>Enter a Valid Date</small>
 
