@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link href="./css/login.css" rel="stylesheet">
+    <script src="./js/login.js"></script>
     <title>Login Form</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
             </div>
             <div>
                 <p><label for="passbox" >Password</label></p>
-                <input id = "passbox" class="inputbox" type="password" name="password" placeholder ="Password" 
+                <input id = "passbox" class="inputbox" type="password" name="psswrd" placeholder ="Password" 
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
                             title="atleast one number, one upper, one lower and min 10characters">
             </div>
@@ -31,7 +32,7 @@
             </div>
             <div>
                 <!-- <p><input id="submitbutton" type="submit"></p> -->
-                <button type="submit">Submit</button>
+                <button id ="submitButton" type="submit">Submit</button>
             </div>
         </form>
     </div>
