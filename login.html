@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link href="./css/login.css" rel="stylesheet">
-    <script src="./js/login.js"></script>
+    <script defer src="./js/login.js"></script>
     <title>Login Form</title>
 </head>
 <body>
@@ -11,6 +11,7 @@
             <div>
                 <p><label for="emailbox">Email Address</label></p>
                 <input id = "emailbox" class="inputbox" type="text" name="email" placeholder="Enter Email"
+                            value=""
                             pattern=".+@.+\.[a-zA-Z]{2,3}"
                             title = "enter valid email address" required >
                 <small>We'll never share your email with anyone else</small>
@@ -18,12 +19,14 @@
             <div>
                 <p><label for="passbox" >Password</label></p>
                 <input id = "passbox" class="inputbox" type="password" name="psswrd" placeholder ="Password" 
+                            value=""
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
                             title="atleast one number, one upper, one lower and min 10characters">
             </div>
             <div>
                 <p><label for="urlbox">URL</label></p>
-                <input id = "urlbox" class = "inputbox" type="text" placeholder="Enter URL" 
+                <input id = "urlbox" class = "inputbox" type="text" placeholder="Enter URL"
+                            value="" 
                             pattern="https?://.+"
                             title="url must be valid http or https">
             </div>

@@ -1,7 +1,12 @@
-document.getElementById("submitButton").onclick = printInputs();
+document.getElementById("submitButton").onclick= printInputs();
+
+function getInputs(){
+   const form = document.getElementById("loginform");
+   return form.elements["emailbox"].value;
+    ;
+}
 
 function printInputs(){
-    console.log( "EMAIL: "+document.getElementById("emailbox").value);
-    console.log("Password: "+document.getElementById("passbox").value);
-    console.log("Url: "+document.getElementById("urlBox").value);
+    console.log(getInputs());
 }
+document.getElementsByTagName("loginform").namedItem
