@@ -236,10 +236,18 @@ printFibo(length,starterA,starterB);
 */
 console.log("Number 15:");
 
+
+
+
 function displayTime(){
     const dateNow = new Date();
+    
+
     const timeFormat =  dateNow.getFullYear() +"-"+ (dateNow.getMonth()+1)+ "-"+dateNow.getDate()+" "+ 
                             dateNow.getHours() +":"+ dateNow.getMinutes() +":"+ dateNow.getSeconds();
+
+
+
     document.getElementById("clockArea").innerText = timeFormat;
 }
 setInterval(displayTime,1000);

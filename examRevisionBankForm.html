@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script defer src="./js/examRevisionBankForm.js"> </script>
+  <link rel="stylesheet" href="./css/bankForm.css"> 
+  
+</head>
+<body>
+
+    <header id="header">
+        <h2 style="color: whitesmoke;"> CS472 ::: MiniBanking App</h2>
+    </header>
+  
+    
+    <div>
+        <h1>Bank Account Form</h1>
+    </div>
+
+    <form action="#" id = "bankForm">
+        <div> 
+            <label for="accountNO">Account No</label><br>
+            <input class = "inputbox" type="text" id="accountNO" placeholder="01-XXX-XXXX" pattern="01-[0-9]{3}-[0-9]{4}" required ><br>
+            <small>Your unique account number</small> 
+        </div>
+        <div> 
+            <label for="customerName">Customer Name<br></label> 
+            <input id="customerName" class = "inputbox" type="text" placeholder="e.g. John B. Smith" required >
+            
+        </div>
+
+        <div> 
+            <label for = "typeOfAccount">Type of Account<br></label>
+            <select id="typeOfAccount" class = "inputbox" name="accountType" required >
+                <option value="" ></option>
+                <option value="checking">Checking</option>
+                <option value="saving">Saving</option>
+                <option value="Loan">Loan</option>
+            </select>
+        </div>
+        <div id="buttondiv">
+            <button id="submitbutton" type="submit">Create New Account</button> 
+        </div>
+    </form>
+
+    </div>
+
+    <table id="outputTable">
+        <thead>
+           <th id="tablehead">List of Customer Accounts</th>
+        </thead>
+        <tbody id="tablebody">
+            <tr></tr>
+
+        </tbody>
+    </table>
+
+    <footer>
+    <h4>CS472 Bank ::: WAP </h4>
+    </footer>
+
+</body>
+</html>
