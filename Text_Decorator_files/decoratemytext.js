@@ -69,13 +69,15 @@ window.onload = function(){
         for(let j=0; j<myWordArray.length; j++){
             let element = myWordArray[j];
             let consonants = "";
+            let firstCapital ="";
             let index = 0;
             while(isConsonant(element.charAt(index))){
                 consonants += element.charAt(index)
                 index++;
                 if(index>=element.length-1){break;}
             }
-            myWordArray[j] = element.substring(index) + consonants +  "-ay";
+            firstCapital = element.charAt(index).toUpperCase();
+            myWordArray[j] = firstCapital + element.substring(++index) + consonants +  "-ay";
         }
         textArea.value = myWordArray.join(" ");
     }
