@@ -19,8 +19,14 @@ window.onload = function(){
         }
         textArea.style.fontSize = (parseInt(textArea.style.fontSize) + 2 ) + "pt";   
     }
+    var timer=false;
     function biggen(){
-        setInterval(makeBigger,500);
+        if(timer){
+            clearInterval(timer);
+            timer=false;
+        }else{
+            timer=setInterval(makeBigger,1000);
+        }
     }
     button.onclick = biggen;
 
@@ -76,7 +82,7 @@ window.onload = function(){
                 if(index>=element.length-1){break;}
             }
             let fLetterCaps = element.charAt(index).toUpperCase();
-            myWordArray[j] = fLetterCaps + element.substring(++index).toLowerCase() + consonants.toLowerCase() +  "-ay";
+            myWordArray[j] = fLetterCaps + element.substring(++index).toLowerCase() + consonants.toLowerCase() +"ay";
         }
         textArea.value = myWordArray.join(" ");
     }
