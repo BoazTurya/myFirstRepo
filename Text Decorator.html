@@ -12,6 +12,7 @@
 		<script src="./Text Decorator_files/jquery.min.js.download" type="text/javascript"></script>
 
 		<!-- link to your script file here -->
+		<script defer src="./Text Decorator_files/decoratemytext.js"></script>
 		
 	</head>
 
@@ -23,7 +24,20 @@
 		</div>
 
 		<!-- Your UI controls go here -->
-		
-	
+		<fieldset>
+			<legend>Text</legend>
+			<textarea id="myTextArea" cols="30" rows="4">
+				Sample Item 1
+				Sample Item 2
+			</textarea>
+		</fieldset>
 
-</body></html>
+		<fieldset>
+			<legend>Decoration</legend>
+			<button id = "biggerDecorations">Bigger Decoration</button><br><br>
+			<label><input type="checkbox" id="blingCheckBox">Bling</label>
+			
+		</fieldset>
+	</body>
+
+</html>
