@@ -58,8 +58,6 @@ window.onload = function(){
     }
     chkbox.onchange = doManyBlingThings;
 
-
-
     function makeMalkovich(){  
         const myWords = textArea.value;
         let myWordArray = myWords.split(" ");
