@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- saved from url=(0069)http://mumstudents.org/cs472/2016-03-AS-KL/Labs/6/decoratemytext.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 		<title>Text Decorator</title>
 		<link href="./Text_Decorator_files/decoratemytext.css" type="text/css" rel="stylesheet">
 
@@ -9,7 +11,7 @@
 		many useful functions which we need.
 		Please don't remove this link or change its URL; leave it as-is!
 		-->
-		<script src="./Text_Decorator_files/jquery.min.js.download" type="text/javascript"></script>
+		<script src="./Text_Decorator_files/jquery.min.js.download" ></script>
 
 		<!-- link to your script file here -->
 		<script defer src="./Text_Decorator_files/decoratemytext.js"></script>
@@ -26,18 +28,29 @@
 		<!-- Your UI controls go here -->
 		<fieldset>
 			<legend>Text</legend>
-			<textarea id="myTextArea" cols="30" rows="4">
-				Sample Item 1
-				Sample Item 2
-			</textarea>
+			<textarea id="myTextArea" cols="30" rows="4">Sample Item 1 Sample Item 2</textarea>
 		</fieldset>
 
 		<fieldset>
 			<legend>Decoration</legend>
-			<button id = "biggerDecorations">Bigger Decoration</button><br><br>
+			<button id = "biggerDecorations">Bigger Decoration</button>
+			<button id = "makePigLatin">Pig Latin</button>
+			<button id = "makeMalkovich">Malkovich</button><br><br>
 			<label><input type="checkbox" id="blingCheckBox">Bling</label>
 			
 		</fieldset>
+
+
+		<div id="validators" style="float: right;">
+			<a href="https://boazturya.github.io/myFirstRepo/index.html">MY HOME</a><br>
+			<a href="https://validator.w3.org/nu/?doc=https://boazturya.github.io/myFirstRepo/TextDecorator.html">
+				<img src="./images/tmnt/w3c-html.png" alt="Valid HTML5" />
+			</a> <br />
+			<a href="https://jigsaw.w3.org/css-validator/validator?uri=https://BoazTurya.github.io/myFirstRepo/Text_Decorator_files/decoratemytext.css">
+				<img src="./images/tmnt/w3c-css.png" alt="Valid CSS" />
+			</a>
+		</div>
+		
 	</body>
 
 </html>
