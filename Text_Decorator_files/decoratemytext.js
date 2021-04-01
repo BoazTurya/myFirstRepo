@@ -75,7 +75,7 @@ window.onload = function(){
                 index++;
                 if(index>=element.length-1){break;}
             }
-            myWordArray[j] = element.substring(index) + consonants +  "ay";
+            myWordArray[j] = element.substring(index) + consonants +  "-ay";
         }
         textArea.value = myWordArray.join(" ");
     }
