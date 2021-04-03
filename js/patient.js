@@ -16,6 +16,7 @@ myform.addEventListener("submit", function(event){
     patients.push(newPatient);
     clearTable();
     populateTable();
+    //this.reset();
 }
 
 );
