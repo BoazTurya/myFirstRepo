@@ -51,3 +51,94 @@ Apparatus SCUBA abbr > g ea r
     for..of returns values of arrays but does not work with object
     properties
 */
+    /*
+        var helper = function(n) {
+    return function() {
+    return n;
+    }
+    }
+    var funcs = [];
+    for (var i = 0; i < 5; i++) {
+    funcs[i] = helper(i);
+    };
+    console.log(funcs[0]());
+    console.log(funcs[1]());
+    console.log(funcs[2]());
+    console.log(funcs[3]());
+    console.log(funcs[4]());
+
+    IIFE
+        var funcs = [];
+    for (var i = 0; i < 5; i++) {
+    funcs[i]=(function(n) {
+    return function()
+    {
+    return n;
+    }
+    }(i));
+    };
+    console.log(funcs[0]());
+    console.log(funcs[1]());
+    console.log(funcs[2]());
+    console.log(funcs[3]());
+    console.log(funcs[4]());
+
+    Revealing Module Pattern
+    widely used in single page web apps 
+    const Module = (function() {
+    const privateFunction = function() {
+    // private
+    };
+    const someFunction = function() {
+    // public
+    };
+    const anotherFunction = function() {
+    // public
+    };
+    return {
+    someMethod: someFunction,
+    anotherMethod: anotherFunction
+    };
+    })();
+        Access Private Variables
+    const Module = (function() {
+    const privateArray = [];
+    const publicFunction = function(something) {
+    privateArray.push(something);
+    };
+    return {
+    publicMethod: publicFunction
+    };
+    })();
+
+    const counter = (function() {
+    let privateCounter = 0; //private data
+    function changeBy(val) { //private inner function
+    privateCounter += val;
+    }
+    return {
+    increment: function() { // three public functions are closures that share the same environment.
+    changeBy(1);
+    },
+    decrement: function() {
+    changeBy(-1);
+    },
+    value: function() {
+    return privateCounter;
+    }
+    }
+    })();
+    scope
+    scope: The enclosing context where values and expressions are associated.
+
+    essentially, the visibility of various identifiers in a program
+
+    lexical scope: Scopes are nested via language syntax; a name refers to the
+    most local definition of that symbol.
+
+    most modern languages (Java, C, ML, Scheme, JavaScript)
+
+    dynamic scope : A name always refers to the most recently executed definition
+    of that symbol. It searches through the dynamic stack of function calls for a
+    variable declaration.
+*/
