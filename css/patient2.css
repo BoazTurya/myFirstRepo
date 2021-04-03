@@ -1,0 +1,76 @@
+
+#header{
+    background-color: coral;
+    width: 100%;
+}
+#welcome{
+    float: right;
+}
+#linklist{
+    list-style-type: none;
+    
+}
+#linklist > li{
+    display: inline-block;
+}
+
+footer{
+    background-color: lightgray;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+#maincontainer{
+    width: 80%;
+    margin: auto;
+}
+
+#buttondiv{
+    clear: left;
+    float: right;
+}
+#registerbutton{
+    padding-left: 70px;
+    padding-right: 70px;
+    background-color:chocolate;
+    font-size: 1.2em;
+}
+#resetbutton{
+    background-color:gray;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-size: 1.2em;
+}
+
+#patientid{
+    width: 100%;
+}
+
+table, form{
+    width: 100%;
+}
+
+#otherinputcontainer{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+} 
+.inputdiv{
+    width: 100%;
+    padding: 10px;
+ }  
+.otherinputs{
+    width: 90%;
+}
+ th{
+     padding-right: 5px;
+     padding-left: 5px;
+     border: solid;
+ }
+ tr{
+     background-color: rgba(236, 235, 235, 0.938);
+ }
+ #cks{
+     padding-top: 40px;
+ }

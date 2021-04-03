@@ -33,17 +33,25 @@ nav{
 }
 footer{
     background-color: lightgray;
-    height: 20px;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
-
 #flexdiv{
     display:grid;
     grid-template-columns: 66% 33%;
-}
+} 
 #containerdiv{
-    width: 75%;
+    width: 80%;
     margin: auto;
 }
 #imagediv img{
     width: 100%;
+}
+
+#maincontainer{
+    width: 80%;
+    margin: auto;
 }

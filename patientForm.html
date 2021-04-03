@@ -1,44 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./js/newProduct.js"></script>
+    <title>HCMC Patients</title>
+    <script defer src="./js/patient.js"></script>
+    <link rel="stylesheet" href="./css/patient2.css">
+    <script src="https://code.jquery.com/jquery-git.js"></script>
 
-    <link rel="stylesheet" href="./css/patient.css">
 </head>
+
 <body>
-    <header>
-        <span id="nav" class="leftspan">
-            <span id="title">HolyCross Medical Center</span>
-            <ul id="navlist">
+    <div id="header">
+        <span>
+            HolyCross Medical Center
+
+        </span>
+        <span>
+            <ul id="linklist">
                 <li><a href="#">Home</a></li>
                 <li><a href="./patientForm.html">Patients</a></li>
             </ul>
-        </span>
-        <span id="welcome" class="rightspan">
-            <p>Welcome, Guest</p>
 
         </span>
-    </header>
-    <div id="container">
+        <span style="float: right;">
+            Welcome, Guest
+
+        </span>
+
+    </div>
+    <div id="maincontainer">
+        <h1>Patients Registration</h1>
+        <form id="patientform">
+            <div id="divpatientid">
+                <label for="patientid">*Patient ID No</label><br>
+                <input type="text" name="" id="patientid">
+            </div>
+            <div id="otherinputcontainer">
+                <div class="inputdiv">
+                    <label for="firstName">*First Name</label><br>
+                    <input type="text" id="firstName" class="otherinputs" placeholder="Enter FirstName"><br>
+                    <small>Enter the patients first name</small>
+                </div>
+                <div class="inputdiv">
+                    <label for="middleInitial">Middle Initial(s)</label><br>
+                    <input type="text" id="middleInitial" class="otherinputs">
+                </div>
+                <div class="inputdiv">
+                    <label for="lastName">*Last Name</label><br>
+                    <input type="text" id="lastName" class="otherinputs"><br>
+                    <small>Enter the Patient's last name</small>
+                </div>
+
+                <div class="inputdiv">
+                    <label for="dateOfBirth">*Date of Birth:</label><br>
+                    <input type="date" id="dateOfBirth" class="otherinputs">
+                </div>
+
+                <div class="inputdiv">
+                    <label for="departments">*Department</label><br>
+                    <select class="otherinputs" id="departments" required>
+                        <option value=""></option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Ear, Nose and Throat">Ear, Nose and Throat</option>
+                        <option value="Primary Care">Primary Care</option>
+                        <option value="[Unassigned]">[Unassigned]</option>
+                    </select>
+                </div>
+                <div>
+                    *is this an Out-patient?<br>
+                    <input type="radio" name="outpatient" value="YES">
+                    <label for="YES">Yes</label>
+                    <input type="radio" name="outpatient" value="NO">
+                    <label for="NO">NO</label>
+                </div>
+            </div>
+
+            <div id="buttondiv">
+                <button id="resetbutton" type="reset">Reset</button>
+                <button id="registerbutton" type="submit">Register</button>
+            </div><br>
+
+        </form>
+        <div id="cks">
+            <input type="checkbox" id="elderly">
+            <label for="elderly">show only elderly</label>
+            <input type="checkbox" id="out">
+            <label for="out">show only out</label>
+        </div>
+
+        <table id="patienttable">
+            <thead>
+                <th>Patient ID No</th>
+                <th>First name</th>
+                <th>Middle Initial(s)</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Department</th>
+                <th>Out-Patient?</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+
+        </table>
+
+
+
+
+
+
+
 
     </div>
 
     <footer>
         <span class="leftspan">B. Turyahikayo:::CS472-WAP</span>
-        <span class="rightspan">HCMC @ May 2020</span>
+        <span class="rightspan" style="float: right;">HCMC @ May 2020</span>
     </footer>
     <div id="validators" style="float: right;">
-        <a href="https://boazturya.github.io/myFirstRepo/index.html">MY HOME</a><br>
+        <a href="https://boazturya.github.io/myFirstRepo/index.html">MY HOME</a>
         <a href="https://validator.w3.org/nu/?doc=https://boazturya.github.io/myFirstRepo/TextDecorator.html">
             <img src="./images/tmnt/w3c-html.png" alt="Valid HTML5" />
-        </a> <br />
-        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://BoazTurya.github.io/myFirstRepo/Text_Decorator_files/decoratemytext.css">
+        </a>
+        <a
+            href="https://jigsaw.w3.org/css-validator/validator?uri=https://BoazTurya.github.io/myFirstRepo/Text_Decorator_files/decoratemytext.css">
             <img src="./images/tmnt/w3c-css.png" alt="Valid CSS" />
         </a>
     </div>
 </body>
+
 </html>
