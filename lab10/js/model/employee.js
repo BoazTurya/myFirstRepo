@@ -1,6 +1,6 @@
 "use-strict";
 
-import { person } from "./person.js";
+import {person} from "./person.js";
 
 export class employee extends person{
     
@@ -9,11 +9,17 @@ export class employee extends person{
         this.salary = salary;
         this.hireDate = new Date();
     }
+    set salary(value){
+        this._salary = value;
+    }
+    set hireDate(date){
+        this._hireDate = date;
+    }
     get salary(){
-        return this.salary;
+        return this._salary;
     }
     get hireDate(){
-        return this.hireDate;
+        return this._hireDate;
     }
     doJob(jobTitle){
         console.log(`${super.name} is a ${jobTitle} who earns $${this.salary}`);

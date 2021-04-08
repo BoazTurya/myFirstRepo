@@ -1,26 +1,26 @@
-
 "use-strict"
+
 export class person {
-    name = "";
-    dateOfBirth =null;
+    _name = "";
+    _dateOfBirth =null;
 
     constructor(name,dateOfBirth){
         this.name = name;
         this.dateOfBirth = dateOfBirth;
     }
-    setName(value){
-        this.name = value;
+    set name(value){
+        this._name = value;
     }
-    setDateOfBirth(value){
-        this.dateOfBirth = value;
+    set dateOfBirth(value){
+        this._dateOfBirth = value;
     }
-    getName(){
-        return this.name;
+    get name(){
+        return this._name;
     }
-    getDateOfBirth(){
-        return this.dateOfBirth;
+    get dateOfBirth(){
+        return this._dateOfBirth;
     }
     toString(){
-        return `{ Name: ${this.name}, DateOfBirth: ${this.dateOfBirth.toISODateString()}}`;
+        return `{ Name: ${this.name}, DateOfBirth: ${this.dateOfBirth.getFullYear()}-${this.dateOfBirth.getMonth()+1}-${this.dateOfBirth.getDate()}}`;
     }
 }

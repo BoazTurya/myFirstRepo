@@ -1,3 +1,5 @@
+"use-Strict"
+import { employee } from "./model/employee.js";
 import {person} from "./model/person.js";
 //import {employee} from "./model/employee.js"
 
@@ -10,5 +12,10 @@ import {person} from "./model/person.js";
 
     persons.forEach(ele=> console.log(ele.toString()));
 
+    const jim = new employee("Jim Hanson", 245990.00);
+    jim.doJob("Software Engineer");
+
 
 })();
+
+
