@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Product Form</title>
     <link rel="stylesheet" href="./css/newProduct.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="./js/newProduct.js"></script>
 </head>
 <body>
@@ -28,7 +29,7 @@
     </div>
     <div id="outer">
         <h1>New Product Form </h1>
-        <form action="#">
+        <form id="addproductform" action="#">
             <div id="forminputdiv">
                 <div>
                     <label>Product Number<br>
@@ -72,7 +73,7 @@
             <fieldset id="buttonsright">
                 <button type="reset" id="resetbutton" >Reset</button>
                 <button id = "cancelbutton" >Cancel</button>
-                <button id = "addproductbutton">Add Product</button>
+                <button id = "addproductbutton" type="submit">Add Product</button>
             </fieldset>
         </form>
     </div>

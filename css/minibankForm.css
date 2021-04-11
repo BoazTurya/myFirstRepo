@@ -33,10 +33,15 @@ form >div{
     background-color: turquoise;
     padding: 10px;
 }
-#tablehead{
+caption{
     background-color: turquoise ;
-    text-align: left;
+    font-weight: bold;
 }
 table{
     width: 100%;
+}
+th{
+    text-align: left;
+    border:solid;
+    border-color:mediumturquoise;
 }

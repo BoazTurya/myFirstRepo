@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>MiniBanking App</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script defer src="./js/examRevisionBankForm.js"> </script>
-    <link rel="stylesheet" href="./css/bankForm.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer src="./js/miniBankForm.js"> </script>
+    <link rel="stylesheet" href="./css/minibankForm.css">
 
 </head>
 
@@ -47,10 +48,19 @@
                 <button id="submitbutton" type="submit">Create New Account</button>
             </div>
         </form>
+        <div>
+            <input id = "savingsOnly" type="checkbox">
+            <label for="savingsOnly">Savings Only</label>
+        </div>
 
         <table id="outputTable">
-            <thead>
-                <th id="tablehead">List of Customer Accounts</th>
+            <caption>List of Customer Accounts</caption>
+            <thead id="tablehead">
+                <tr>
+                    <th scope="col">Account Number</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Type of Account</th>
+                </tr>
             </thead>
             <tbody id="tablebody">
                 <tr></tr>
