@@ -1,7 +1,7 @@
 
 
 
-(function(){
+const loadbooks= function(){
     fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/list")
     .then(response=>{
 
@@ -22,5 +22,27 @@
             $("table tbody").append(newRow);
         });
     });
+};
+loadbooks();
 
-})();
+$("#bookForm").submit(function(event){
+    event.preventDefault();
+    const newBook = {
+        "title": $("#title").val(),
+        "isbn": $("#isbn").val(),
+        "overdueFee": $("#overdueFee").val(),
+        "publisher": $("#publisher").val(),
+        "datePublished": $("#datePublished").val()
+    };
+    fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/add", {
+        method: "post",
+        body: JSON.stringify(newBook),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
+    $("table tbody").empty();
+    loadbooks();
+    this.reset();
+    
+});
